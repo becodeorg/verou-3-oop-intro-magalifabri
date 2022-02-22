@@ -2,11 +2,22 @@
 
 declare(strict_types=1);
 
-class Beverage
+/* EXERCISE 5
+
+Copy the class of exercise 1.
+
+TODO: Change the properties to private.
+TODO: Fix the errors without using getter and setter functions.
+TODO: Change the price to 3.5 euro and print it also on the screen on a new line.
+*/
+
+
+
+class Beverage_ex_5
 {
-    public string $color;
-    public float $price;
-    public string $temperature;
+    private string $color;
+    private float $price;
+    private string $temperature;
 
     public function __construct(string $color, float $price, string $temperature = "cold")
     {

@@ -2,9 +2,37 @@
 
 declare(strict_types=1);
 
-require_once './Beverage.protected.php';
+/* EXERCISE 4
 
-class Beer_protected extends Beverage_protected
+Copy the code of exercise 2 to here and delete everything related to cola.
+
+TODO: Make all properties protected.
+TODO: Make all the other prints work without error without changing the beverage class.
+
+USE TYPEHINTING EVERYWHERE!
+*/
+
+class Beverage_4
+{
+    protected $color;
+    protected $price;
+    protected $temperature;
+
+    public function __construct($color, $price, $temperature = "cold")
+    {
+        $this->color = $color;
+        $this->price = $price;
+        $this->temperature = $temperature;
+    }
+
+    public function getInfo()
+    {
+        return "This beverage is $this->temperature and $this->color.";
+    }
+}
+
+
+class Beer_4 extends Beverage_4
 {
     protected string $name;
     protected float $alcoholPercentage;
