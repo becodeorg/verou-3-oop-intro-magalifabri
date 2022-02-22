@@ -1,14 +1,21 @@
 <?php
 
+declare(strict_types=1);
+
 require_once './Beverage.php';
 
 class Beer extends Beverage
 {
-    public $name;
-    public $alcoholPercentage;
+    public string $name;
+    public float $alcoholPercentage;
 
-    public function __construct(string $name, string $color, float $price, float $alcoholPercentage, string $temperature = "cold")
-    {
+    public function __construct(
+        string $name,
+        string $color,
+        float $price,
+        float $alcoholPercentage,
+        string $temperature = "cold"
+    ) {
         $this->name = $name;
         $this->color = $color;
         $this->price = $price;
@@ -16,7 +23,7 @@ class Beer extends Beverage
         $this->alcoholPercentage = $alcoholPercentage;
     }
 
-    public function getAlcoholpercentage()
+    public function getAlcoholpercentage(): float
     {
         return $this->alcoholPercentage;
     }
