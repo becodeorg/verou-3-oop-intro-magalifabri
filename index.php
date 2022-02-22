@@ -108,3 +108,15 @@ $bev->useConstant();
 
 $beer = new Beer_ex_6('mud', 'black', 2, 1);
 $beer->useConstant();
+
+echo '<br><br>';
+
+
+// --- EX 7 ---
+
+require_once './exercise_7_static.php';
+
+echo 'EX 7:<br>'
+    . Beverage_ex_7::getAddress_method1()
+    . '<br>'
+    . Beverage_ex_7::getAddress_method2();
