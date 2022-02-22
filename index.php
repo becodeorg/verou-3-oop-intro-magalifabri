@@ -34,14 +34,28 @@ echo 'EX 2:<br>'
     . $duvel->color
     . '<br>'
     . $duvel->getInfo()
-    . '<br><br>';
+    . '<br>';
 
 $fakeDuvel = new Beverage('blond', 3.5);
 try {
     $fakeDuvel->getAlcoholpercentage();
 } catch (\Throwable $th) {
-    echo $th;
+    echo $th . '<br><br>';
 }
 
 
 // --- EX 3 ---
+
+require_once './Beer.private.php';
+
+$duvel = new Beer_private('Duvel', 'blond', 3.5, 8.5);
+
+echo 'EX 3:<br>'
+    . $duvel->getAlcoholpercentage()
+    . '<br>'
+    . $duvel->getColor()
+    . '<br>'
+    . $duvel->getInfo()
+    . '<br>'
+    . $duvel->getBeerInfo()
+    . '<br><br>';
