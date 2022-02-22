@@ -16,10 +16,8 @@ class Beer_protected extends Beverage_protected
         float $alcoholPercentage,
         string $temperature = "cold"
     ) {
+        parent::__construct($color, $price, $temperature);
         $this->name = $name;
-        $this->color = $color;
-        $this->price = $price;
-        $this->temperature = $temperature;
         $this->alcoholPercentage = $alcoholPercentage;
     }
 
