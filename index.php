@@ -49,8 +49,27 @@ try {
 require_once './Beer.private.php';
 
 $duvel = new Beer_private('Duvel', 'blond', 3.5, 8.5);
+$duvel->setColor('light');
 
 echo 'EX 3:<br>'
+    . $duvel->getAlcoholpercentage()
+    . '<br>'
+    . $duvel->getColor()
+    . '<br>'
+    . $duvel->getInfo()
+    . '<br>'
+    . $duvel->getBeerInfo()
+    . '<br><br>';
+
+
+// --- EX 4 ---
+
+require_once './Beer.protected.php';
+
+$duvel = new Beer_private('Duvel', 'blond', 3.5, 8.5);
+$duvel->setColor('light');
+
+echo 'EX 4:<br>'
     . $duvel->getAlcoholpercentage()
     . '<br>'
     . $duvel->getColor()
