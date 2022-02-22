@@ -89,9 +89,15 @@ $cola = new Beverage_ex_5("black", 2);
 
 echo 'EX 5:<br>'
     . $cola->getInfo()
-    . '<br>'
-    // . $cola->temperature
-    . '<br><br>';
+    . '<br>';
+
+$reflectionClass = new ReflectionClass('Beverage_ex_5');
+$RCcolor = $reflectionClass->getProperty('temperature');
+$RCcolor->setAccessible(true);
+$RCcolor->setValue($cola, 99);
+// echo $RCcolor->getValue($cola) . '<br><br>';
+
+echo $cola->getInfo() . '<br><br>';
 
 
 // --- EX 6 ---
